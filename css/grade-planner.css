@@ -1,0 +1,331 @@
+/* ===== Grade Goal Planner Styles ===== */
+
+/* Form Styles */
+.gp-form {
+  padding-top: 8px;
+}
+
+.gp-form-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.gp-field label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--gray-700);
+  margin-bottom: 6px;
+}
+
+.gp-field input,
+.gp-field select {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid var(--gray-300);
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  color: var(--gray-800);
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.gp-field input:focus,
+.gp-field select:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+/* Assessment Inputs */
+.gp-assessments-section {
+  margin-bottom: 20px;
+}
+
+.gp-assessments-section > label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--gray-700);
+  margin-bottom: 10px;
+}
+
+.gp-hint {
+  font-weight: 400;
+  color: var(--gray-400);
+}
+
+.gp-assessment-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.gp-assessment-row {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.gp-assessment-row input[type="text"] {
+  flex: 2;
+  padding: 9px 12px;
+  border: 1px solid var(--gray-300);
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  outline: none;
+}
+
+.gp-assessment-row input[type="number"] {
+  flex: 1;
+  max-width: 100px;
+  padding: 9px 12px;
+  border: 1px solid var(--gray-300);
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  outline: none;
+}
+
+.gp-assessment-row input:focus {
+  border-color: var(--primary);
+}
+
+.gp-btn-remove {
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: var(--gray-100);
+  color: var(--gray-500);
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.gp-btn-remove:hover {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.gp-assessment-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.gp-weight-total {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--gray-500);
+}
+
+/* Buttons */
+.gp-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.gp-btn-primary:hover {
+  background: var(--primary-dark);
+  transform: translateY(-1px);
+}
+
+.gp-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  background: white;
+  color: var(--primary);
+  border: 1px solid var(--primary);
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.gp-btn-secondary:hover {
+  background: var(--primary-light);
+}
+
+.gp-btn-small {
+  padding: 5px 10px;
+  background: var(--gray-100);
+  color: var(--gray-600);
+  border: 1px solid var(--gray-200);
+  border-radius: 6px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.gp-btn-small:hover {
+  background: var(--gray-200);
+}
+
+.gp-btn-danger {
+  color: #dc2626;
+}
+
+.gp-btn-danger:hover {
+  background: #fee2e2;
+  border-color: #fecaca;
+}
+
+/* Error message */
+.gp-error {
+  margin-top: 12px;
+  padding: 10px 14px;
+  background: #fee2e2;
+  color: #991b1b;
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  border: 1px solid #fecaca;
+}
+
+/* Grade Map */
+.gp-grade-map {
+  margin-top: 12px;
+}
+
+/* Module Card */
+.gp-module-card {
+  border-left: 4px solid var(--primary);
+}
+
+/* Progress Dashboard */
+.gp-progress-dashboard {
+  background: var(--gray-50);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-sm);
+  padding: 16px 20px;
+  margin-bottom: 20px;
+}
+
+.gp-progress-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.gp-stat {
+  text-align: center;
+}
+
+.gp-stat-label {
+  display: block;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--gray-500);
+  margin-bottom: 4px;
+}
+
+.gp-stat-value {
+  display: block;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--gray-800);
+}
+
+/* Assessment Table in Module */
+.gp-assessments-table {
+  margin-bottom: 20px;
+  overflow-x: auto;
+}
+
+.gp-score-input-group {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.gp-score-input {
+  width: 70px;
+  padding: 6px 8px;
+  border: 1px solid var(--gray-300);
+  border-radius: 6px;
+  font-size: 13px;
+  outline: none;
+}
+
+.gp-score-input:focus {
+  border-color: var(--primary);
+}
+
+.gp-score-max {
+  font-size: 12px;
+  color: var(--gray-500);
+}
+
+.gp-recommended {
+  font-size: 13px;
+  color: var(--primary-dark);
+  font-weight: 500;
+}
+
+/* AI Advice */
+.gp-ai-advice {
+  background: linear-gradient(135deg, #ede9fe, #e0e7ff);
+  border: 1px solid #c7d2fe;
+  border-radius: var(--radius-sm);
+  padding: 16px 20px;
+}
+
+.gp-ai-advice h4 {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--gray-800);
+  margin-bottom: 10px;
+}
+
+.gp-ai-advice ul {
+  list-style: none;
+  padding: 0;
+}
+
+.gp-ai-advice li {
+  position: relative;
+  padding: 6px 0 6px 20px;
+  font-size: 13px;
+  color: var(--gray-700);
+  line-height: 1.6;
+}
+
+.gp-ai-advice li::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: var(--primary);
+  font-weight: bold;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .gp-form-row {
+    grid-template-columns: 1fr;
+  }
+  .gp-progress-stats {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  .gp-assessment-row {
+    flex-wrap: wrap;
+  }
+}
